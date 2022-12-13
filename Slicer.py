@@ -17,10 +17,6 @@ Prefs =  Preferences()
 		# All
 		# Learn layouts better
 		#</Todo>
-		#<Todo>
-		#Utils
-		# make it a singleton or similar as well
-		#</Todo>
 
 class ButtonSlicer(QWidget):
 	def __init__(self, *args, **kwargs):

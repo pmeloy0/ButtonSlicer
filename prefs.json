@@ -1,7 +1,7 @@
 {
     "fontFamily": "None",
-    "fontSize": 16,
-    "fontColor": "white",
+    "fontSize": 18,
+    "fontColor": "#ffffff",
     "sourceWidth": 300,
     "sourceHeight": 100,
     "buttonWidth": 120,

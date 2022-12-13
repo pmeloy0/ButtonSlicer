@@ -20,6 +20,7 @@ class Preferences:
 
 # Thanks to Gribouillis on the python forum for telling me how to make it load only once!
 
+#Source image sizes
 	@property
 	def sourceWidth(self):
 		return self._dict["sourceWidth"]
@@ -33,6 +34,7 @@ class Preferences:
 	def sourceHeight(self,val):
 		self._dict["sourceHeight"] = val
 
+#font properties
 	@property
 	def font(self):
 		return QFont(self._dict["fontFamily"],self._dict["fontSize"])
@@ -53,22 +55,24 @@ class Preferences:
 		return QColor.fromString(self._dict["fontColor"])
 	@fontColor.setter
 	def fontColor(self,val):
+		print("fontcolor",val)
 		self._dict["fontColor"] = val
 
+#Button properties
 	@property
 	def buttonWidth(self):
 		return self._dict["buttonWidth"]
 	@buttonWidth.setter
 	def buttonWidth(self,val):
 		self._dict["buttonWidth"] = val
-	
 	@property
 	def buttonHeight(self):
 		return self._dict["buttonHeight"]
 	@buttonHeight.setter
 	def buttonHeight(self,val):
 		self._dict["buttonHeight"] = val
-
+	
+#utils
 	def showDict(self):
 		print(self._dict)
 		
@@ -93,7 +97,6 @@ class Preferences:
 			print(self._dict)
 		else:
 			self.setDefaults()
-
 
 	def savePrefs(self):
 		self.showDict()

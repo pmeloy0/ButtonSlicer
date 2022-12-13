@@ -66,20 +66,19 @@ class Caption(QWidget):
 		color.setCurrentColor(Prefs.fontColor)
 		color.exec()
 		_color = color.currentColor()
-		print(_color.name())
 		_color = str(_color.name())
-		Prefs.fontColor(_color)
+		Prefs.fontColor = _color
 		self.getCaptionImage()
 		
 	def fontChanged(self):
-		Prefs.setFontFamily(self._cbFont.currentText())
+		Prefs.fontFamily = self._cbFont.currentText()
 		self.getCaptionImage()
 	
 	def sizeChanged(self):
 		val = Utils.digitsOnly(self._leSize.text())
 		self._leSize.setText(str(val))
 		if val > 6:
-			Prefs.setFontSize(val)
+			Prefs.fontSize = val
 			self.getCaptionImage()
 		
 	def vertOffset(self,val):
